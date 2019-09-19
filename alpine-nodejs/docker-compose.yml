@@ -1,0 +1,28 @@
+version: '3'
+services:
+  tully:
+    build:
+      context: ./
+      dockerfile: microservice.DockerFile
+    env_file:
+      distribution.env
+    # volumes:
+    #   - /Applications/MAMP/tmp/mysql:/var/lib/mysql
+    # ports:
+    #   - 8083:3306
+    # environment:
+    #   MYSQL_ROOT_PASSWORD: root
+    # volumes:
+    #   - /path/of/my/local/filesystem:/path/to/mount/into/containers/filesystem
+  # devmysql:
+  #   build:
+  #     context: ./
+  #     dockerfile: MySQLDev.DockerFile
+  #   ports:
+  #     - "3306:3306"
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: ''
+  #     MYSQL_ALLOW_EMPTY_PASSWORD : 'yes'
+  #   restart: always
+  #   volumes:
+  #           - /database/path/of/my/local/filesystem:/database/path/to/mount/into/containers/filesystem
